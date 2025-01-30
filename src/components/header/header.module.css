@@ -1,0 +1,104 @@
+.menu {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  list-style: none;
+  padding-top: 20px;
+}
+
+.menu li {
+  cursor: pointer;
+  transition: color .15s ease;
+  transition: text-shadow .20s ease;
+  /* color: var(--foreground-grey); */
+  color: rgba(136, 136, 136, 0.6);
+  font-size: 18px;
+}
+
+.menu li:hover {
+  color: var(--foreground);
+  text-shadow: 0px 0px 18px white;
+}
+
+/*//////////*/
+
+.header {
+  position: relative;
+  padding: 1rem;
+  /* background: #333; */
+  color: white;
+}
+
+/* Styles du bouton burger */
+.burger {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  display: none; /* Caché sur desktop */
+}
+
+/* Le menu de navigation */
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Media query pour mobile */
+@media (max-width: 1024px) {
+  .burger {
+    display: block; /* Affiche le burger sur mobile */
+    position: fixed;
+    z-index: 3;
+  }
+
+  .nav {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    display: none; /* Masqué par défaut */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .nav.open {
+    display: flex; /* Affiché quand isOpen est true */
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 60px;
+  }
+
+  .menu li {
+    font-size: 32px;
+  }
+}

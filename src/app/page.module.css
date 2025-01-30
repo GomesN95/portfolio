@@ -6,7 +6,6 @@
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
 
-  min-height: 100svh;
   max-width: 1280px;
   margin: 0 auto;
   font-family: var(--font-geist-sans);
@@ -53,7 +52,7 @@
   }
 
   .lastName {
-    color: #EA6023;
+    color: var(--primary);
   }
   
   .poste {
@@ -102,7 +101,7 @@
     }
   
     .lastName {
-      color: #EA6023;
+      color: var(--primary);
     }
     
     .poste {
