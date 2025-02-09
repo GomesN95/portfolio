@@ -1,0 +1,46 @@
+.experiencesPage {
+  padding: 20px 20px;
+
+  .title {
+    display: block;
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  .experiences {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.experience {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 10px;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
+    margin-bottom: 12px;
+
+    .role {
+
+    }
+
+    .company {
+    
+    }
+  }
+
+  .description {
+    margin-bottom: 12px;
+  }
+
+  .tags {
+    
+  }
+  
+}
