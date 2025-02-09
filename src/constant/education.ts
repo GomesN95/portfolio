@@ -1,4 +1,4 @@
-import { IEducation } from "@/interfaces/education";
+import { IEducation } from "@/interfaces/education.interface";
 
 export const EDUCATIONS: IEducation[] = [
     {

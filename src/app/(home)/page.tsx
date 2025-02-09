@@ -6,7 +6,8 @@ import FORMES from '@/assets/formes.svg';
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: 'Gomes Nicolas - Home',
+  title: 'Nicolas Gomes | Full Stack Developer',
+  description: "Discover my work as a Full Stack developer, showcasing projects, skills, and experiences.",
 }
 
 export default function Home() {

@@ -1,10 +1,11 @@
-import { IEducation } from '@/interfaces/education';
+import { IEducation } from '@/interfaces/education.interface';
 
 import styles from './page.module.scss';
 import { EDUCATIONS } from '@/constant/education';
 
 export const metadata = {
-  title: 'Gomes Nicolas - Education',
+  title: 'My Educational Background | Nicolas Gomes',
+  description: "Explore my academic journey, degrees, certifications, and courses that shaped my expertise in Full Stack development.",
 }
 
 export default function Education() {
@@ -34,9 +35,9 @@ function YearModule(props: {
       {
         !props.isLast && (
           <div className={styles.line} >
-            <div className={styles.light} style={{ animationDelay: `${props.index * 3}s` }} />
-            <div className={styles.light} style={{ animationDelay: `${props.index * 3 + 2}s` }} />
-            <div className={styles.light} style={{ animationDelay: `${props.index * 3 + 4}s` }} />
+            {[...Array(3)].map((_, index) => (
+              <div key={index} className={styles.light} style={{ animationDelay: `${props.index * 3 + (index * 2)}s` }} />
+            ))}
           </div>
         )
       }
