@@ -2,14 +2,13 @@
   padding: 20px 20px;
 
   .title {
-    display: block;
-    text-align: center;
-    margin-bottom: 28px;
+    display: none;
   }
 
   .experiences {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
   }
 }
@@ -18,6 +17,7 @@
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 10px;
+  max-width: 1024px;
 
   .title {
     display: flex;
@@ -26,12 +26,14 @@
     text-align: left;
     margin-bottom: 12px;
 
-    .role {
+    .company {}
 
+    .role {
+      margin-bottom: 10px;
     }
 
-    .company {
-    
+    .date {
+
     }
   }
 
@@ -39,8 +41,17 @@
     margin-bottom: 12px;
   }
 
-  .tags {
-    
+  .tags {}
+
+}
+
+@media (max-width: 1024px) {
+  .experiencesPage {
+    .title {
+      display: block;
+      text-align: center;
+      margin-bottom: 28px;
+    }
   }
-  
+
 }

@@ -29,7 +29,8 @@ function Experience(props: { experience: IExperience }) {
     <div className={styles.experience}>
       <div className={styles.title}>
         <h2 className='company'>{props.experience.companyName}</h2>
-        <h2 className='role'>{props.experience.role}</h2>
+        <h2 className={styles.role}>{props.experience.role}</h2>
+        <h3>{props.experience.dates[0]} {props.experience.dates[1] ? `- ${props.experience.dates[1]}` : ''}</h3>
       </div>
       <div className={styles.description}>
         <p>{props.experience.description}</p>
