@@ -1,0 +1,47 @@
+.experienceCard {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 10px;
+  max-width: 1024px;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    margin-bottom: 12px;
+
+    .company {}
+
+    .role {
+      margin-bottom: 10px;
+    }
+
+    .date {
+
+    }
+  }
+
+  .description {
+    margin-bottom: 12px;
+  }
+
+  .tags {}
+  
+  .showButton {
+    margin-top: 10px;
+    padding: 5px 7px;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    font-size: 12px;
+    transition: background 0.3s;
+  
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+}

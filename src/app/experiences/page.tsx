@@ -1,6 +1,5 @@
 import { EXPERIENCES } from '@/constant/experiences';
-import { IExperience } from '@/interfaces/experience.interface';
-import { Tag } from '@/components/tag/tag';
+import { ExperienceCard } from '@/components/experience-card/experience-card';
 
 import styles from './page.module.scss';
 
@@ -16,28 +15,8 @@ export default function Experiences() {
       <div className={styles.experiences}>
         {
           EXPERIENCES.map((experience, index) =>
-            <Experience key={index} experience={experience} />
+            <ExperienceCard key={index} experience={experience} />
           )
-        }
-      </div>
-    </div>
-  );
-}
-
-function Experience(props: { experience: IExperience }) {
-  return (
-    <div className={styles.experience}>
-      <div className={styles.title}>
-        <h2 className='company'>{props.experience.companyName}</h2>
-        <h2 className={styles.role}>{props.experience.role}</h2>
-        <h3>{props.experience.dates[0]} {props.experience.dates[1] ? `- ${props.experience.dates[1]}` : ''}</h3>
-      </div>
-      <div className={styles.description}>
-        <p>{props.experience.description}</p>
-      </div>
-      <div className={styles.tags}>
-        {
-          props.experience.skills.map((skill, index) => <Tag key={index} value={skill} color={'orange'} />)
         }
       </div>
     </div>
