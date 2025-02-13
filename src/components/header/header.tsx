@@ -38,7 +38,7 @@ export function Header() {
             <Link className={styles.disabled} href="/projects" onClick={closeMenu}>Projects</Link>
           </li>
           <li>
-            <Link className={styles.disabled} href="/contact" onClick={closeMenu}>Contact</Link>
+            <Link href="/contact" onClick={closeMenu}>Contact</Link>
           </li>
         </ul>
       </nav>

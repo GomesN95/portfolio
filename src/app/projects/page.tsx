@@ -5,7 +5,7 @@ export const metadata = {
   description: "Take a look at my latest Full Stack development projects, featuring innovative designs, clean code, and real-world applications.",
 }
 
-export default function Projects() {
+export default function ProjectsPage() {
   return (
     <div className={styles.main}>
 

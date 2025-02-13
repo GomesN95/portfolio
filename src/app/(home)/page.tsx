@@ -10,7 +10,7 @@ export const metadata = {
   description: "Discover my work as a Full Stack developer, showcasing projects, skills, and experiences.",
 }
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
