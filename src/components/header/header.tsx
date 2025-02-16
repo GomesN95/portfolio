@@ -4,8 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
-import styles from "./header.module.css";
+import styles from "./header.module.scss";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,6 +40,14 @@ export function Header() {
           </li>
           <li>
             <Link className={styles.disabled} href="/contact" onClick={closeMenu}>Contact</Link>
+          </li>
+          <li className={styles.socials}>
+            <Link href="https://www.linkedin.com/in/gomes-nicolas/">
+              <FontAwesomeIcon icon={faLinkedin} />
+            </Link>
+            <Link href="https://github.com/GomesN95">
+              <FontAwesomeIcon icon={faGithub} />
+            </Link>
           </li>
         </ul>
       </nav>

@@ -3,14 +3,14 @@ import Image from 'next/image'
 import PROFILE from '@/assets/profile.png';
 import FORMES from '@/assets/formes.svg';
 
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 
 export const metadata = {
   title: 'Nicolas Gomes | Full Stack Developer',
   description: "Discover my work as a Full Stack developer, showcasing projects, skills, and experiences.",
 }
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>

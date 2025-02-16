@@ -8,7 +8,7 @@ export const metadata = {
   description: "Explore my academic journey, degrees, certifications, and courses that shaped my expertise in Full Stack development.",
 }
 
-export default function Education() {
+export default function EducationPage() {
   return (
     <div className={styles.main}>
       <h1 className={styles.title}>Education</h1>

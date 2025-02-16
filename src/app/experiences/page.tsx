@@ -8,7 +8,7 @@ export const metadata = {
   description: "Explore my career as a Full Stack developer, working with modern technologies like Next.js, React, and TypeScript to build high-performance applications.",
 }
 
-export default function Experiences() {
+export default function ExperiencesPage() {
   return (
     <div className={styles.experiencesPage}>
       <h1 className={styles.title}>Experiences</h1>
