@@ -1,4 +1,5 @@
 import { ProjectCard } from '@/components/project-card/project-card';
+import { PROJECTS } from '@/constant/project';
 
 import styles from './page.module.scss';
 
@@ -11,11 +12,11 @@ export default function ProjectsPage() {
   return (
     <div className={styles.projectsPage}>
       <section className={styles.projects}>
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        {
+          PROJECTS.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+          ))
+        }
       </section>
     </div>
   );
