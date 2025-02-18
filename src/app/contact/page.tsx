@@ -3,7 +3,7 @@ export const metadata = {
   description: "Let's connect! Contact me for collaboration, freelance work, or any development inquiries.",
 }
 
-import ContactForm from './contact-form/contact-form';
+import ContactForm from './components/contact-form/contact-form';
 
 import styles from './contact.module.scss';
 

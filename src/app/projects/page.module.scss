@@ -1,0 +1,10 @@
+.projectsPage {
+  max-width: 1024px;
+  margin: 0 auto;
+
+  .projects{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

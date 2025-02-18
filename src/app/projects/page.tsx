@@ -1,3 +1,5 @@
+import { ProjectCard } from '@/components/project-card/project-card';
+
 import styles from './page.module.scss';
 
 export const metadata = {
@@ -7,8 +9,14 @@ export const metadata = {
 
 export default function ProjectsPage() {
   return (
-    <div className={styles.main}>
-
+    <div className={styles.projectsPage}>
+      <section className={styles.projects}>
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+      </section>
     </div>
   );
 }
