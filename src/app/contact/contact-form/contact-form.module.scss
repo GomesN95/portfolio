@@ -1,0 +1,36 @@
+.contactForm {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 0 auto;
+
+  .name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+  }
+}
+
+.response {
+  text-align: center;
+  font-size: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+}
+
+
+@media (max-width: 1024px) {
+  .contactForm {
+    .name {
+      flex-direction: column;
+    }
+  }
+}

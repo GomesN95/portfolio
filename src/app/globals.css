@@ -2,6 +2,7 @@
   --background: linear-gradient(58deg, rgba(12,22,39,1) 25%, rgba(45,33,38,1) 65%, rgba(70,41,38,1) 85%, rgba(104,52,37,1) 100%, rgba(136,63,37,1) 110%, rgba(172,75,36,1) 100%, rgba(234,96,35,1) 100%);
   --foreground: #ededed;
   --primary: #EA6023;
+  --secondary: #0c1627;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -10,6 +11,7 @@
     --foreground: #ededed;
     --foreground-grey: #888888;
     --primary: #EA6023;
+    --secondary: #0c1627;
   }
 }
 
