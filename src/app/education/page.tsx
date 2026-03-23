@@ -4,8 +4,8 @@ import styles from './page.module.scss';
 import { EDUCATIONS } from '@/constant/education';
 
 export const metadata = {
-  title: 'My Educational Background | Nicolas Gomes',
-  description: "Explore my academic journey, degrees, certifications, and courses that shaped my expertise in Full Stack development.",
+  title: 'My Educational Background',
+  description: "Academic background and training in software architecture and development.",
 }
 
 export default function EducationPage() {

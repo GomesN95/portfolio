@@ -4,8 +4,8 @@ import { PROJECTS } from '@/constant/project';
 import styles from './page.module.scss';
 
 export const metadata = {
-  title: 'Projects & Portfolio |  Nicolas Gomes',
-  description: "Take a look at my latest Full Stack development projects, featuring innovative designs, clean code, and real-world applications.",
+  title: 'Projects & Portfolio',
+  description: "Selection of projects delivered or led by Nicolas Gomes, with context, stack, and role.",
 }
 
 export default function ProjectsPage() {

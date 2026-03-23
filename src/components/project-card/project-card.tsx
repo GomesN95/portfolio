@@ -1,20 +1,35 @@
-import Image from 'next/image'
-
 import { IProject } from '@/interfaces/project.interface';
-import BIC from '@/assets/BIC.png';
+import { Tag } from '../tag/tag';
 
 import styles from './project-card.module.scss';
 
 export function ProjectCard(props: {project: IProject}) {
+  const statusLabel = {
+    live: "Live",
+    "case-study": "Case study",
+    private: "Private work",
+  }[props.project.status];
+
   return (
-    <div className={styles.projectCard}>
-      {/* <div className={styles.image}> */}
-        <Image className={styles.image} src={BIC} alt="BIC" />
-      {/* </div> */}
+    <article className={styles.projectCard}>
       <div className={styles.informations}>
-        <label htmlFor="Project">{props.project.name}</label>
-        <label htmlFor="client">{props.project.client}</label>
+        <div className={styles.topline}>
+          <p className={styles.client}>{props.project.client}</p>
+          <p className={styles.status}>{statusLabel}</p>
+        </div>
+        <h2>{props.project.name}</h2>
+        <p className={styles.summary}>{props.project.summary}</p>
+        <div className={styles.tags}>
+          {props.project.stack.map((skill) => (
+            <Tag key={skill} value={skill} />
+          ))}
+        </div>
+        {props.project.href ? (
+          <a href={props.project.href} target="_blank" rel="noreferrer" className={styles.link}>
+            View project
+          </a>
+        ) : null}
       </div>
-    </div>
+    </article>
   );
 }

@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Get in Touch | Nicolas Gomes',
-  description: "Let's connect! Contact me for collaboration, freelance work, or any development inquiries.",
+  title: 'Get in Touch',
+  description: "Contact Nicolas Gomes for collaboration, freelance opportunities, or a technical discussion.",
 }
 
 import ContactForm from './components/contact-form/contact-form';

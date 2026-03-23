@@ -1,57 +1,61 @@
 .projectCard {
-  position: relative;
-  border-radius: 12px;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  height: 300px;
-  width: 300px;
-  cursor: pointer;
-
-  * {
-    cursor: pointer;
-  }
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top right, rgba(234, 96, 35, 0.25), transparent 35%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(8, 14, 28, 0.8));
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 20px 40px rgba(4, 7, 16, 0.32);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  min-height: 340px;
+  padding: 24px;
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(#ffffff, 0.15);
-    
-
-    .image {
-      filter: brightness(0.5) blur(3px); // Réduit la luminosité et ajoute du flou
-      transition: filter 0.3s ease;
-    }
-
-    .informations {
-      display: block;
-    }
-  }
-
-  .image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: filter 0.3s ease;
+    transform: translateY(-6px);
+    box-shadow: 0 28px 50px rgba(4, 7, 16, 0.42);
   }
 
   .informations {
-    display: none;
-    position: absolute;
-    bottom: 30%;
-    width: 100%;
-    padding: 15px;
-    color: #333;
-    background-color: rgba(255, 255, 255, 0.6);
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
 
-    label {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 5px;
-      color: #555;
+    h2 {
+      font-size: 1.5rem;
+      line-height: 1.2;
     }
+  }
+
+  .topline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+
+    .client,
+    .status {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+  }
+
+  .summary {
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.6;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+  }
+
+  .link {
+    margin-top: auto;
+    width: fit-content;
+    color: var(--primary);
+    font-weight: 700;
   }
 }

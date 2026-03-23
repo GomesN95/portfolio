@@ -1,8 +1,10 @@
 :root {
   --background: linear-gradient(58deg, rgba(12,22,39,1) 25%, rgba(45,33,38,1) 65%, rgba(70,41,38,1) 85%, rgba(104,52,37,1) 100%, rgba(136,63,37,1) 110%, rgba(172,75,36,1) 100%, rgba(234,96,35,1) 100%);
   --foreground: #ededed;
+  --foreground-grey: #9ca9b8;
   --primary: #EA6023;
   --secondary: #0c1627;
+  --surface: rgba(255, 255, 255, 0.08);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,7 +27,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   background-attachment: fixed;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -39,6 +41,12 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
 }
 
 @media (prefers-color-scheme: dark) {

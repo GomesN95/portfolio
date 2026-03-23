@@ -21,6 +21,12 @@
     box-shadow: 0 0 30px var(--primary);
   }
 
+  &:disabled {
+    opacity: 0.65;
+    cursor: progress;
+    box-shadow: none;
+  }
+
   .btnContent {
     display: flex;
     justify-content: center;
