@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
-import { usePathname } from "next/navigation";
+import { ChangeEvent, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -15,6 +15,7 @@ import styles from "./header.module.scss";
 export function Header(props: { locale: Locale }) {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
   const dictionary = getDictionary(props.locale);
 
   const navigationItems = [
@@ -25,8 +26,6 @@ export function Header(props: { locale: Locale }) {
     { href: `/${props.locale}/contact`, label: dictionary.nav.contact },
   ];
 
-  const localeIndex = locales.indexOf(props.locale);
-  const nextLocale: Locale = locales[(localeIndex + 1) % locales.length];
   const localeMeta: Record<Locale, { label: string; flag: string }> = {
     en: { label: dictionary.nav.english, flag: "🇺🇸" },
     fr: { label: dictionary.nav.french, flag: "🇫🇷" },
@@ -38,7 +37,13 @@ export function Header(props: { locale: Locale }) {
   };
 
   const localizedPath = pathname?.replace(new RegExp(`^/(${locales.join("|")})`), "") || "";
-  const nextLocaleHref = `/${nextLocale}${localizedPath || ""}`;
+  const getLocaleHref = (locale: Locale) => `/${locale}${localizedPath || ""}`;
+
+  const handleLocaleChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    const selectedLocale = event.target.value as Locale;
+    closeMenu();
+    router.push(getLocaleHref(selectedLocale));
+  };
 
   return (
     <header className={styles.header}>
@@ -60,16 +65,17 @@ export function Header(props: { locale: Locale }) {
               </Link>
             </li>
           ))}
-          <li>
-            <Link
-              href={nextLocaleHref}
-              onClick={closeMenu}
-              aria-label={`${dictionary.nav.languageSwitcher}: ${localeMeta[nextLocale].label}`}
-              className={styles.localeButton}
-            >
-              <span aria-hidden="true">{localeMeta[nextLocale].flag}</span>
-              <span>{localeMeta[nextLocale].label}</span>
-            </Link>
+          <li className={styles.localeSwitcher}>
+            <label htmlFor="locale-selector" className={styles.visuallyHidden}>
+              {dictionary.nav.languageSwitcher}
+            </label>
+            <select id="locale-selector" value={props.locale} onChange={handleLocaleChange} aria-label={dictionary.nav.languageSwitcher}>
+              {locales.map((locale) => (
+                <option key={locale} value={locale}>
+                  {localeMeta[locale].flag} {localeMeta[locale].label}
+                </option>
+              ))}
+            </select>
           </li>
           <li className={styles.socials}>
             <Link href="https://www.linkedin.com/in/gomes-nicolas/" target="_blank" rel="noreferrer" aria-label={dictionary.nav.linkedInAria}>
