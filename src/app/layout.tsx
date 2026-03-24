@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
 
-import { Header } from "@/components/header/header";
+import { defaultLocale } from "@/i18n/config";
+import { getDictionary } from "@/i18n/dictionaries";
 
 import "./globals.css";
 
+const dictionary = getDictionary(defaultLocale);
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://portfolio.gomesnicolas.com"),
-  title: {
-    default: "Nicolas Gomes | Full Stack Developer",
-    template: "%s | Nicolas Gomes",
-  },
-  description: "Portfolio of Nicolas Gomes, full-stack developer, featuring experience, projects, and contact details.",
+  title: dictionary.metadata.title,
+  description: dictionary.metadata.description,
   openGraph: {
-    title: "Nicolas Gomes | Full Stack Developer",
-    description: "Portfolio of Nicolas Gomes, full-stack developer, featuring experience, projects, and contact details.",
+    title: dictionary.metadata.title.default,
+    description: dictionary.metadata.description,
     url: "https://portfolio.gomesnicolas.com",
     siteName: "Nicolas Gomes Portfolio",
     locale: "en_US",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nicolas Gomes | Full Stack Developer",
-    description: "Portfolio of Nicolas Gomes, full-stack developer, featuring experience, projects, and contact details.",
+    title: dictionary.metadata.title.default,
+    description: dictionary.metadata.description,
   },
 };
 
@@ -33,10 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-US">
-      <body>
-        <Header />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
