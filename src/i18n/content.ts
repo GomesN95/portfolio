@@ -42,6 +42,43 @@ export function getExperiences(locale: Locale): IExperience[] {
     ];
   }
 
+  if (locale === "pt") {
+    return [
+      {
+        companyName: "YSO Corp",
+        role: "Desenvolvedor Full Stack / Gerente de Projetos",
+        description:
+          "Experiência ampla no design e desenvolvimento de soluções para clientes reconhecidos, como BIC e Voodoo, além de projetos internos. Condução de projetos de ponta a ponta, da definição de requisitos até a produção, com acompanhamento completo do cliente e contribuições nas frentes de marketing/comercial.",
+        skills: ["JavaScript/TypeScript", "Angular", "React", "Vue.js", "Nuxt.js", "Node.js", "KoaJs", "React Native", "Expo", "Electron", "C#.Net", "Shell", "AntDesign", "Sequelize", "Prisma", "MySQL", "PostgreSQL", "MongoDB", "ElasticSearch", "iOS", "Android", "Cocoapods", "Gradle", "AWS", "Terraform", "Heroku", "Kubernetes", "Docker", "Bitbucket", "Jira", "Contentful", "HubSpot", "Lens", "MonoRepo", "Powens (budget insight)", "DALL.E", "Midjourney", "Discord", "Alter Way", "Expivi"],
+        dates: ["2020", "2025"],
+      },
+      {
+        companyName: "ADES",
+        role: "Desenvolvedor Full Stack C# / .NET - Aprendizagem",
+        description:
+          "Participação no design e desenvolvimento de um Service Desk/CRM para desktop e web, além de um aplicativo mobile complementar. Criação de funcionalidades para melhorar a gestão de interações com clientes e o acompanhamento de solicitações em tempo real.",
+        skills: ["C#", ".NET", "WPF", "ASP.Net", "Xamarin", "SQLServer", "Azure", "Microsoft Graph", "WINDev"],
+        dates: ["2017", "2020"],
+      },
+      {
+        companyName: "YSO Corp",
+        role: "Desenvolvedor AngularJS - Estágio",
+        description:
+          "Desenvolvimento de uma API de testes e criação de um aplicativo WordPress para o site MyGSMData, automatizando e simplificando validações funcionais.",
+        skills: ["AngularJs", "Unit test", "WordPress"],
+        dates: ["2016", null],
+      },
+      {
+        companyName: "Mairie de Villiers-Le-Bel",
+        role: "Administrador de redes - Estágio",
+        description:
+          "Estágio focado na gestão da infraestrutura de TI da prefeitura: administração de servidores, manutenção diária, segurança de dados e suporte a renovações de hardware.",
+        skills: ["Administração de servidores / infraestrutura de TI", "Windows OS", "Active Directory", "Administração de contas de usuários", "Manutenção de rede", "Suporte a usuários", "Gestão de incidentes de hardware / software"],
+        dates: ["2013", "2015"],
+      },
+    ];
+  }
+
   return [
     {
       companyName: "YSO Corp",
@@ -89,6 +126,16 @@ export function getEducations(locale: Locale): IEducation[] {
     ];
   }
 
+  if (locale === "pt") {
+    return [
+      { diploma: "Título RNCP Nível 7 (equivalente a Mestrado) EIAL", school: "ScholaNova", city: "Paris", yearStart: "2019", yearEnd: "2020", field: "Especialista em Engenharia e Arquitetura de Software" },
+      { diploma: "Título RNCP Nível 6 (Bacharelado+4) DAI", school: "ScholaNova", city: "Paris", yearStart: "2018", yearEnd: "2019", field: "Concepção e Desenvolvimento de Aplicações e Internet" },
+      { diploma: "Licenciatura Profissional MICDTL", school: "Paris 13", city: "Villetaneuse", yearStart: "2017", yearEnd: "2018", field: "Informática: Concepção, Desenvolvimento e Teste de Software" },
+      { diploma: "Diploma Técnico Superior SNIR", school: "La Tourelle", city: "Sarcelles", yearStart: "2015", yearEnd: "2017", field: "Sistemas Digitais - Informática e Redes" },
+      { diploma: "Bacharelado Profissional SENR", school: "La Tourelle", city: "Sarcelles", yearStart: "2012", yearEnd: "2015", field: "Sistemas Eletrônicos Digitais - Telecom e Redes" },
+    ];
+  }
+
   return [
     { diploma: "RNCP Level 7 (Master's equivalent) EIAL", school: "ScholaNova", city: "Paris", yearStart: "2019", yearEnd: "2020", field: "Software Engineering and Architecture Expert" },
     { diploma: "RNCP Level 6 (Bachelor+4) DAI", school: "ScholaNova", city: "Paris", yearStart: "2018", yearEnd: "2019", field: "Application and Internet Design & Development" },
@@ -103,38 +150,47 @@ export function getProjects(locale: Locale): IProject[] {
     portfolio: {
       en: "Personal website rebuilt with Next.js to present experience, projects and contact flow in a cleaner product format.",
       fr: "Site personnel reconstruit avec Next.js pour présenter l'expérience, les projets et le contact avec un format plus produit.",
+      pt: "Site pessoal reconstruído com Next.js para apresentar experiência, projetos e contato em um formato mais orientado a produto.",
     },
     bic: {
       en: "Customization experience for BIC products, combining front-end polish and client-facing delivery constraints.",
       fr: "Expérience de personnalisation de produits BIC, combinant qualité front-end et contraintes de livraison client.",
+      pt: "Experiência de personalização de produtos BIC, combinando qualidade de front-end e restrições de entrega para o cliente.",
     },
     voodoo: {
       en: "Content platform work for a high-traffic gaming brand with emphasis on maintainability and delivery speed.",
       fr: "Contribution à une plateforme de contenu à fort trafic, avec un focus maintenabilité et vitesse de livraison.",
+      pt: "Trabalho em plataforma de conteúdo para uma marca de jogos com alto tráfego, com foco em manutenibilidade e velocidade de entrega.",
     },
     monster: {
       en: "Interactive playable ad workflow involving rapid iteration, performance constraints and cross-team delivery.",
       fr: "Workflow de publicités playables interactives impliquant itérations rapides, contraintes de performance et collaboration transverse.",
+      pt: "Flux de anúncios jogáveis interativos com iterações rápidas, restrições de performance e colaboração entre equipes.",
     },
     yso: {
       en: "Internal platform and tooling work to support product operations and collaboration across teams.",
       fr: "Travail sur une plateforme interne et des outils pour soutenir les opérations produit et la collaboration des équipes.",
+      pt: "Trabalho em plataforma interna e ferramentas para apoiar operações de produto e colaboração entre equipes.",
     },
     gameutils: {
       en: "Developer tooling and utilities designed to speed up production workflows and repeated delivery tasks.",
       fr: "Outils et utilitaires développeur conçus pour accélérer les workflows de production et les tâches récurrentes.",
+      pt: "Ferramentas e utilitários para desenvolvedores criados para acelerar fluxos de produção e tarefas recorrentes.",
     },
     sartliva: {
       en: "Custom product development for a client project with full-stack ownership and iterative delivery.",
       fr: "Développement sur-mesure pour un projet client, avec ownership full-stack et livraisons itératives.",
+      pt: "Desenvolvimento sob medida para projeto de cliente, com responsabilidade full-stack e entregas iterativas.",
     },
     hitroad: {
       en: "Client-facing product work blending application features, business constraints and delivery ownership.",
       fr: "Travail produit orienté client mêlant fonctionnalités applicatives, contraintes métier et ownership de livraison.",
+      pt: "Trabalho de produto voltado ao cliente, combinando funcionalidades da aplicação, restrições de negócio e responsabilidade de entrega.",
     },
     inovoiz: {
       en: "Product contribution on a business-oriented platform, with focus on usable interfaces and robust integrations.",
       fr: "Contribution produit sur une plateforme orientée business, avec un focus sur l'UX et des intégrations robustes.",
+      pt: "Contribuição de produto em uma plataforma orientada a negócios, com foco em interfaces usáveis e integrações robustas.",
     },
   };
 
