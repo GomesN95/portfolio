@@ -1,14 +1,14 @@
-import { IProject } from '@/interfaces/project.interface';
-import { Tag } from '../tag/tag';
+import { IProject } from "@/interfaces/project.interface";
+import { Tag } from "../tag/tag";
 
-import styles from './project-card.module.scss';
+import styles from "./project-card.module.scss";
 
-export function ProjectCard(props: {project: IProject}) {
-  const statusLabel = {
-    live: "Live",
-    "case-study": "Case study",
-    private: "Private work",
-  }[props.project.status];
+export function ProjectCard(props: {
+  project: IProject;
+  viewProjectLabel: string;
+  statusLabels: Record<"live" | "case-study" | "private", string>;
+}) {
+  const statusLabel = props.statusLabels[props.project.status];
 
   return (
     <article className={styles.projectCard}>
@@ -26,7 +26,7 @@ export function ProjectCard(props: {project: IProject}) {
         </div>
         {props.project.href ? (
           <a href={props.project.href} target="_blank" rel="noreferrer" className={styles.link}>
-            View project
+            {props.viewProjectLabel}
           </a>
         ) : null}
       </div>

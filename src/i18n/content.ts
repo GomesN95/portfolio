@@ -1,0 +1,152 @@
+import { IEducation } from "@/interfaces/education.interface";
+import { IExperience } from "@/interfaces/experience.interface";
+import { IProject } from "@/interfaces/project.interface";
+
+import { Locale } from "./config";
+
+export function getExperiences(locale: Locale): IExperience[] {
+  if (locale === "fr") {
+    return [
+      {
+        companyName: "YSO Corp",
+        role: "Développeur Full Stack / Chef de projet",
+        description:
+          "Expérience riche dans la conception et le développement de solutions pour des clients reconnus comme BIC et Voodoo, ainsi que sur des projets internes. Pilotage de projets de bout en bout, de la définition des besoins à la mise en production, avec un suivi client complet et des contributions sur les volets marketing/commerciaux.",
+        skills: ["JavaScript/TypeScript", "Angular", "React", "Vue.js", "Nuxt.js", "Node.js", "KoaJs", "React Native", "Expo", "Electron", "C#.Net", "Shell", "AntDesign", "Sequelize", "Prisma", "MySQL", "PostgreSQL", "MongoDB", "ElasticSearch", "iOS", "Android", "Cocoapods", "Gradle", "AWS", "Terraform", "Heroku", "Kubernetes", "Docker", "Bitbucket", "Jira", "Contentful", "HubSpot", "Lens", "MonoRepo", "Powens (budget insight)", "DALL.E", "Midjourney", "Discord", "Alter Way", "Expivi"],
+        dates: ["2020", "2025"],
+      },
+      {
+        companyName: "ADES",
+        role: "Développeur Full Stack C# / .NET - Alternance",
+        description:
+          "Participation à la conception et au développement d'un Service Desk/CRM sur desktop et web, ainsi qu'une application mobile complémentaire. Création de fonctionnalités pour améliorer la gestion des interactions clients et le suivi des demandes en temps réel.",
+        skills: ["C#", ".NET", "WPF", "ASP.Net", "Xamarin", "SQLServer", "Azure", "Microsoft Graph", "WINDev"],
+        dates: ["2017", "2020"],
+      },
+      {
+        companyName: "YSO Corp",
+        role: "Développeur AngularJS - Stage",
+        description:
+          "Développement d'une API de test et création d'une application WordPress pour le site MyGSMData afin d'automatiser et simplifier les validations fonctionnelles.",
+        skills: ["AngularJs", "Unit test", "WordPress"],
+        dates: ["2016", null],
+      },
+      {
+        companyName: "Mairie de Villiers-Le-Bel",
+        role: "Administrateur réseaux - Stage",
+        description:
+          "Stage autour de la gestion de l'infrastructure informatique de la mairie: administration serveur, maintenance quotidienne, sécurisation des données et accompagnement des renouvellements matériels.",
+        skills: ["Administration serveurs / parc informatique", "Windows OS", "Active Directory", "Administration comptes utilisateurs", "Maintenance réseau", "Support utilisateurs", "Gestion incidents matériels / logiciels"],
+        dates: ["2013", "2015"],
+      },
+    ];
+  }
+
+  return [
+    {
+      companyName: "YSO Corp",
+      role: "Full Stack Developer / Project Manager",
+      description:
+        "Rich and versatile experience in designing and developing solutions for renowned clients such as BIC and Voodoo, as well as internal projects. Specialized in JavaScript/TypeScript and DevOps, I have led numerous projects from start to finish, from requirements definition to production deployment, ensuring comprehensive client support.",
+      skills: ["JavaScript/TypeScript", "Angular", "React", "Vue.js", "Nuxt.js", "Node.js", "KoaJs", "React Native", "Expo", "Electron", "C#.Net", "Shell", "AntDesign", "Sequelize", "Prisma", "MySQL", "PostgreSQL", "MongoDB", "ElasticSearch", "iOS", "Android", "Cocoapods", "Gradle", "AWS", "Terraform", "Heroku", "Kubernetes", "Docker", "Bitbucket", "Jira", "Contentful", "HubSpot", "Lens", "MonoRepo", "Powens (budget insight)", "DALL.E", "Midjourney", "Discord", "Alter Way", "Expivi"],
+      dates: ["2020", "2025"],
+    },
+    {
+      companyName: "ADES",
+      role: "Full Stack Developer C# / .NET - Apprenticeship",
+      description:
+        "Participated in the design and development of a Service Desk/CRM accessible on both desktop and web, as well as a complementary mobile application. My role involved creating features to enable efficient customer interaction management and real-time request tracking.",
+      skills: ["C#", ".NET", "WPF", "ASP.Net", "Xamarin", "SQLServer", "Azure", "Microsoft Graph", "WINDev"],
+      dates: ["2017", "2020"],
+    },
+    {
+      companyName: "YSO Corp",
+      role: "AngularJS Developer - Internship",
+      description:
+        "Developed a test API and created a WordPress application for the MyGSMData website. I designed and implemented the API to automate and streamline functionality testing.",
+      skills: ["AngularJs", "Unit test", "WordPress"],
+      dates: ["2016", null],
+    },
+    {
+      companyName: "Villiers-Le-Bel Town Hall",
+      role: "Network Administrator - Internship",
+      description:
+        "Internship in managing the town hall's IT infrastructure, including data server administration, daily maintenance, data security, and hardware modernization projects.",
+      skills: ["Server / IT infrastructure administration", "Windows OS", "Active Directory", "User Account Management", "Network Maintenance", "User Support / Assistance", "Hardware / Software Incident Management"],
+      dates: ["2013", "2015"],
+    },
+  ];
+}
+
+export function getEducations(locale: Locale): IEducation[] {
+  if (locale === "fr") {
+    return [
+      { diploma: "Titre RNCP Niveau 7 (BAC+5) EIAL", school: "ScholaNova", city: "Paris", yearStart: "2019", yearEnd: "2020", field: "Expert en Ingénierie et Architecture Logicielle" },
+      { diploma: "Titre RNCP Niveau 6 (BAC+4) DAI", school: "ScholaNova", city: "Paris", yearStart: "2018", yearEnd: "2019", field: "Concepteur-Développeur Applicatif et Internet" },
+      { diploma: "Licence Professionnelle MICDTL", school: "Paris 13", city: "Villetaneuse", yearStart: "2017", yearEnd: "2018", field: "Métiers de l'Informatique : Conception, Développement, Test de Logiciels" },
+      { diploma: "BTS SNIR", school: "La Tourelle", city: "Sarcelles", yearStart: "2015", yearEnd: "2017", field: "Systèmes Numériques option Informatique et Réseaux" },
+      { diploma: "BAC Professionnelle SENR", school: "La Tourelle", city: "Sarcelles", yearStart: "2012", yearEnd: "2015", field: "Systèmes Electroniques Numériques option Télécom et Réseaux" },
+    ];
+  }
+
+  return [
+    { diploma: "RNCP Level 7 (Master's equivalent) EIAL", school: "ScholaNova", city: "Paris", yearStart: "2019", yearEnd: "2020", field: "Software Engineering and Architecture Expert" },
+    { diploma: "RNCP Level 6 (Bachelor+4) DAI", school: "ScholaNova", city: "Paris", yearStart: "2018", yearEnd: "2019", field: "Application and Internet Design & Development" },
+    { diploma: "Professional Bachelor's Degree MICDTL", school: "Paris 13", city: "Villetaneuse", yearStart: "2017", yearEnd: "2018", field: "Computer Science: Design, Development, and Software Testing" },
+    { diploma: "Higher National Diploma SNIR", school: "La Tourelle", city: "Sarcelles", yearStart: "2015", yearEnd: "2017", field: "Digital Systems - IT and Networks" },
+    { diploma: "Vocational Baccalaureate SENR", school: "La Tourelle", city: "Sarcelles", yearStart: "2012", yearEnd: "2015", field: "Digital Electronic Systems - Telecom and Networks" },
+  ];
+}
+
+export function getProjects(locale: Locale): IProject[] {
+  const summary = {
+    portfolio: {
+      en: "Personal website rebuilt with Next.js to present experience, projects and contact flow in a cleaner product format.",
+      fr: "Site personnel reconstruit avec Next.js pour présenter l'expérience, les projets et le contact avec un format plus produit.",
+    },
+    bic: {
+      en: "Customization experience for BIC products, combining front-end polish and client-facing delivery constraints.",
+      fr: "Expérience de personnalisation de produits BIC, combinant qualité front-end et contraintes de livraison client.",
+    },
+    voodoo: {
+      en: "Content platform work for a high-traffic gaming brand with emphasis on maintainability and delivery speed.",
+      fr: "Contribution à une plateforme de contenu à fort trafic, avec un focus maintenabilité et vitesse de livraison.",
+    },
+    monster: {
+      en: "Interactive playable ad workflow involving rapid iteration, performance constraints and cross-team delivery.",
+      fr: "Workflow de publicités playables interactives impliquant itérations rapides, contraintes de performance et collaboration transverse.",
+    },
+    yso: {
+      en: "Internal platform and tooling work to support product operations and collaboration across teams.",
+      fr: "Travail sur une plateforme interne et des outils pour soutenir les opérations produit et la collaboration des équipes.",
+    },
+    gameutils: {
+      en: "Developer tooling and utilities designed to speed up production workflows and repeated delivery tasks.",
+      fr: "Outils et utilitaires développeur conçus pour accélérer les workflows de production et les tâches récurrentes.",
+    },
+    sartliva: {
+      en: "Custom product development for a client project with full-stack ownership and iterative delivery.",
+      fr: "Développement sur-mesure pour un projet client, avec ownership full-stack et livraisons itératives.",
+    },
+    hitroad: {
+      en: "Client-facing product work blending application features, business constraints and delivery ownership.",
+      fr: "Travail produit orienté client mêlant fonctionnalités applicatives, contraintes métier et ownership de livraison.",
+    },
+    inovoiz: {
+      en: "Product contribution on a business-oriented platform, with focus on usable interfaces and robust integrations.",
+      fr: "Contribution produit sur une plateforme orientée business, avec un focus sur l'UX et des intégrations robustes.",
+    },
+  };
+
+  return [
+    { name: "Portfolio", client: "NG", summary: summary.portfolio[locale], stack: ["Next.js", "TypeScript", "SCSS", "Resend"], href: "https://portfolio.gomesnicolas.com/", status: "live" },
+    { name: "Design My Bic", client: "BIC", summary: summary.bic[locale], stack: ["Vue.js", "TypeScript", "Node.js"], status: "case-study" },
+    { name: "Voodoo Blog", client: "Voodoo", summary: summary.voodoo[locale], stack: ["React", "Node.js", "Contentful"], status: "case-study" },
+    { name: "Monster Playable", client: "YSO Corp", summary: summary.monster[locale], stack: ["JavaScript", "Canvas", "Webpack"], status: "private" },
+    { name: "YSO Network", client: "YSO Corp", summary: summary.yso[locale], stack: ["Nuxt.js", "Node.js", "PostgreSQL"], status: "private" },
+    { name: "GameUtils", client: "YSO Corp", summary: summary.gameutils[locale], stack: ["Node.js", "TypeScript", "Shell"], status: "private" },
+    { name: "Sartliva", client: "YSO Corp", summary: summary.sartliva[locale], stack: ["React", "Koa", "PostgreSQL"], status: "private" },
+    { name: "Hit The Road", client: "LCE", summary: summary.hitroad[locale], stack: ["Angular", "Node.js", "MySQL"], status: "private" },
+    { name: "InovoiZ", client: "InovoiZ", summary: summary.inovoiz[locale], stack: ["React", "TypeScript", "API integrations"], status: "private" },
+  ];
+}

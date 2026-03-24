@@ -1,3 +1,6 @@
+import { Locale } from "@/i18n/config";
+import { getDictionary } from "@/i18n/dictionaries";
+
 export interface ContactPayload {
   firstName: string;
   lastName: string;
@@ -6,9 +9,17 @@ export interface ContactPayload {
   message: string;
 }
 
+export type ContactErrorCode =
+  | "invalidPayload"
+  | "firstNameMin"
+  | "lastNameMin"
+  | "invalidEmail"
+  | "subjectMin"
+  | "messageMin";
+
 export interface ContactValidationResult {
   data: ContactPayload | null;
-  errors: string[];
+  errors: ContactErrorCode[];
 }
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -21,7 +32,7 @@ export function validateContactPayload(payload: unknown): ContactValidationResul
   if (!payload || typeof payload !== "object") {
     return {
       data: null,
-      errors: ["Invalid contact payload."],
+      errors: ["invalidPayload"],
     };
   }
 
@@ -34,30 +45,35 @@ export function validateContactPayload(payload: unknown): ContactValidationResul
     message: normalizeField(source.message),
   };
 
-  const errors: string[] = [];
+  const errors: ContactErrorCode[] = [];
 
   if (data.firstName.length < 2) {
-    errors.push("First name must be at least 2 characters long.");
+    errors.push("firstNameMin");
   }
 
   if (data.lastName.length < 2) {
-    errors.push("Last name must be at least 2 characters long.");
+    errors.push("lastNameMin");
   }
 
   if (!EMAIL_PATTERN.test(data.email)) {
-    errors.push("Please provide a valid email address.");
+    errors.push("invalidEmail");
   }
 
   if (data.subject.length < 4) {
-    errors.push("Subject must be at least 4 characters long.");
+    errors.push("subjectMin");
   }
 
   if (data.message.length < 20) {
-    errors.push("Message must be at least 20 characters long.");
+    errors.push("messageMin");
   }
 
   return {
     data: errors.length === 0 ? data : null,
     errors,
   };
+}
+
+export function getContactErrorMessage(errorCode: ContactErrorCode, locale: Locale) {
+  const dictionary = getDictionary(locale);
+  return dictionary.contact.validation[errorCode];
 }

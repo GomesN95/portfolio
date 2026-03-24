@@ -1,0 +1,168 @@
+import { Locale } from "./config";
+
+const dictionaries = {
+  en: {
+    nav: {
+      home: "Home",
+      education: "Education",
+      experiences: "Experiences",
+      projects: "Projects",
+      contact: "Contact",
+      openMenu: "Open navigation menu",
+      closeMenu: "Close navigation menu",
+      linkedInAria: "Open Nicolas Gomes LinkedIn profile",
+      githubAria: "Open Nicolas Gomes GitHub profile",
+      languageSwitcher: "Switch language",
+      english: "English",
+      french: "Français",
+    },
+    home: {
+      jobTitle: "Full-Stack Developer",
+      profileAlt: "Profile picture of Nicolas Gomes",
+      shapesAlt: "Decorative shapes",
+      metadataDescription: "Explore Nicolas Gomes's profile, projects, and experience as a full-stack developer.",
+    },
+    experiences: {
+      title: "Experiences",
+      showMore: "Show more",
+      showLess: "Show less",
+      metadataTitle: "Career & Work Experience",
+      metadataDescription: "Professional experience across web and mobile products, as well as DevOps topics.",
+    },
+    education: {
+      title: "Education",
+      metadataTitle: "My Educational Background",
+      metadataDescription: "Academic background and training in software architecture and development.",
+    },
+    projects: {
+      viewProject: "View project",
+      status: {
+        live: "Live",
+        "case-study": "Case study",
+        private: "Private work",
+      },
+      metadataTitle: "Projects & Portfolio",
+      metadataDescription: "Selection of projects delivered or led by Nicolas Gomes, with context, stack, and role.",
+    },
+    contact: {
+      firstName: "First Name",
+      lastName: "Last Name",
+      email: "Email",
+      subject: "Subject",
+      message: "Message",
+      submit: "Submit",
+      backHome: "Back to Home",
+      submitAria: "Submit contact form",
+      backHomeAria: "Go back to the home page",
+      metadataTitle: "Get in Touch",
+      metadataDescription: "Contact Nicolas Gomes for collaboration, freelance opportunities, or a technical discussion.",
+      fallbackError: "An error occurred while submitting the message.",
+      fallbackSubmitError: "Failed to submit the message.",
+      validation: {
+        invalidPayload: "Invalid contact payload.",
+        firstNameMin: "First name must be at least 2 characters long.",
+        lastNameMin: "Last name must be at least 2 characters long.",
+        invalidEmail: "Please provide a valid email address.",
+        subjectMin: "Subject must be at least 4 characters long.",
+        messageMin: "Message must be at least 20 characters long.",
+      },
+      api: {
+        serviceNotConfigured: "Contact service is not configured.",
+        invalidForm: "Invalid contact form.",
+        success: "Message sent successfully!",
+        failed: "Failed to send message.",
+      },
+    },
+    metadata: {
+      title: {
+        default: "Nicolas Gomes | Full Stack Developer",
+        template: "%s | Nicolas Gomes",
+      },
+      description: "Portfolio of Nicolas Gomes, full-stack developer, featuring experience, projects, and contact details.",
+    },
+  },
+  fr: {
+    nav: {
+      home: "Accueil",
+      education: "Formation",
+      experiences: "Expériences",
+      projects: "Projets",
+      contact: "Contact",
+      openMenu: "Ouvrir le menu de navigation",
+      closeMenu: "Fermer le menu de navigation",
+      linkedInAria: "Ouvrir le profil LinkedIn de Nicolas Gomes",
+      githubAria: "Ouvrir le profil GitHub de Nicolas Gomes",
+      languageSwitcher: "Changer de langue",
+      english: "English",
+      french: "Français",
+    },
+    home: {
+      jobTitle: "Développeur Full-Stack",
+      profileAlt: "Photo de profil de Nicolas Gomes",
+      shapesAlt: "Formes décoratives",
+      metadataDescription: "Découvrez le profil, les projets et l'expérience de Nicolas Gomes, développeur full-stack.",
+    },
+    experiences: {
+      title: "Expériences",
+      showMore: "Voir plus",
+      showLess: "Voir moins",
+      metadataTitle: "Parcours & Expériences professionnelles",
+      metadataDescription: "Expérience professionnelle sur des produits web/mobile et des sujets DevOps.",
+    },
+    education: {
+      title: "Formation",
+      metadataTitle: "Mon parcours académique",
+      metadataDescription: "Parcours académique et formation en architecture et développement logiciel.",
+    },
+    projects: {
+      viewProject: "Voir le projet",
+      status: {
+        live: "En ligne",
+        "case-study": "Étude de cas",
+        private: "Projet privé",
+      },
+      metadataTitle: "Projets & Portfolio",
+      metadataDescription: "Sélection de projets livrés ou pilotés par Nicolas Gomes, avec contexte, stack et rôle.",
+    },
+    contact: {
+      firstName: "Prénom",
+      lastName: "Nom",
+      email: "Email",
+      subject: "Sujet",
+      message: "Message",
+      submit: "Envoyer",
+      backHome: "Retour à l'accueil",
+      submitAria: "Envoyer le formulaire de contact",
+      backHomeAria: "Revenir à la page d'accueil",
+      metadataTitle: "Prendre contact",
+      metadataDescription: "Contactez Nicolas Gomes pour une collaboration, une mission freelance ou un échange technique.",
+      fallbackError: "Une erreur est survenue lors de l'envoi du message.",
+      fallbackSubmitError: "Échec de l'envoi du message.",
+      validation: {
+        invalidPayload: "Le formulaire de contact est invalide.",
+        firstNameMin: "Le prénom doit contenir au moins 2 caractères.",
+        lastNameMin: "Le nom doit contenir au moins 2 caractères.",
+        invalidEmail: "Veuillez fournir une adresse email valide.",
+        subjectMin: "Le sujet doit contenir au moins 4 caractères.",
+        messageMin: "Le message doit contenir au moins 20 caractères.",
+      },
+      api: {
+        serviceNotConfigured: "Le service de contact n'est pas configuré.",
+        invalidForm: "Le formulaire de contact est invalide.",
+        success: "Message envoyé avec succès !",
+        failed: "Échec de l'envoi du message.",
+      },
+    },
+    metadata: {
+      title: {
+        default: "Nicolas Gomes | Développeur Full Stack",
+        template: "%s | Nicolas Gomes",
+      },
+      description: "Portfolio de Nicolas Gomes, développeur full-stack, présentant son expérience, ses projets et un formulaire de contact.",
+    },
+  },
+};
+
+export function getDictionary(locale: Locale) {
+  return dictionaries[locale];
+}
