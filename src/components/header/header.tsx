@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-import { Locale } from "@/i18n/config";
+import { Locale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 
 import styles from "./header.module.scss";
@@ -25,14 +25,19 @@ export function Header(props: { locale: Locale }) {
     { href: `/${props.locale}/contact`, label: dictionary.nav.contact },
   ];
 
-  const nextLocale: Locale = props.locale === "en" ? "fr" : "en";
-  const nextLocaleFlag = nextLocale === "en" ? "🇺🇸" : "🇫🇷";
+  const localeIndex = locales.indexOf(props.locale);
+  const nextLocale: Locale = locales[(localeIndex + 1) % locales.length];
+  const localeMeta: Record<Locale, { label: string; flag: string }> = {
+    en: { label: dictionary.nav.english, flag: "🇺🇸" },
+    fr: { label: dictionary.nav.french, flag: "🇫🇷" },
+    pt: { label: dictionary.nav.portuguese, flag: "🇵🇹" },
+  };
 
   const closeMenu = () => {
     setIsOpen(false);
   };
 
-  const localizedPath = pathname?.replace(/^\/(en|fr)/, "") || "";
+  const localizedPath = pathname?.replace(new RegExp(`^/(${locales.join("|")})`), "") || "";
   const nextLocaleHref = `/${nextLocale}${localizedPath || ""}`;
 
   return (
@@ -59,11 +64,11 @@ export function Header(props: { locale: Locale }) {
             <Link
               href={nextLocaleHref}
               onClick={closeMenu}
-              aria-label={`${dictionary.nav.languageSwitcher}: ${nextLocale === "en" ? dictionary.nav.english : dictionary.nav.french}`}
+              aria-label={`${dictionary.nav.languageSwitcher}: ${localeMeta[nextLocale].label}`}
               className={styles.localeButton}
             >
-              <span aria-hidden="true">{nextLocaleFlag}</span>
-              <span>{nextLocale === "en" ? dictionary.nav.english : dictionary.nav.french}</span>
+              <span aria-hidden="true">{localeMeta[nextLocale].flag}</span>
+              <span>{localeMeta[nextLocale].label}</span>
             </Link>
           </li>
           <li className={styles.socials}>
