@@ -26,6 +26,7 @@ export function Header(props: { locale: Locale }) {
   ];
 
   const nextLocale: Locale = props.locale === "en" ? "fr" : "en";
+  const nextLocaleFlag = nextLocale === "en" ? "🇺🇸" : "🇫🇷";
 
   const closeMenu = () => {
     setIsOpen(false);
@@ -55,8 +56,14 @@ export function Header(props: { locale: Locale }) {
             </li>
           ))}
           <li>
-            <Link href={nextLocaleHref} onClick={closeMenu} aria-label={dictionary.nav.languageSwitcher}>
-              {nextLocale === "en" ? dictionary.nav.english : dictionary.nav.french}
+            <Link
+              href={nextLocaleHref}
+              onClick={closeMenu}
+              aria-label={`${dictionary.nav.languageSwitcher}: ${nextLocale === "en" ? dictionary.nav.english : dictionary.nav.french}`}
+              className={styles.localeButton}
+            >
+              <span aria-hidden="true">{nextLocaleFlag}</span>
+              <span>{nextLocale === "en" ? dictionary.nav.english : dictionary.nav.french}</span>
             </Link>
           </li>
           <li className={styles.socials}>
