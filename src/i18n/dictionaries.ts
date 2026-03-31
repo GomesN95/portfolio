@@ -48,10 +48,10 @@ const dictionaries = {
     },
     skills: {
       kicker: "Toolkit",
-      title: "Compétences techniques & humaines",
-      intro: "Je construis des produits web/mobile de bout en bout, de l'idéation à la mise en production, avec une approche orientée qualité, vitesse d'exécution et collaboration.",
+      title: "Technical & Soft Skills",
+      intro: "I build end-to-end web and mobile products, from ideation to production, with a strong focus on quality, speed, and collaboration.",
       metadataTitle: "Skills & Tech Stack",
-      metadataDescription: "Vue d'ensemble des compétences techniques, outils, services et soft skills de Nicolas Gomes.",
+      metadataDescription: "Overview of Nicolas Gomes' technical skills, tools, services, and soft skills.",
       sections: {
         hard: {
           title: "Hard skills",
@@ -75,11 +75,11 @@ const dictionaries = {
         soft: {
           title: "Soft skills",
           items: [
-            "Planification et gestion de projets",
-            "Relations et collaborations internationales",
-            "Esprit d'analyse et résolution de problèmes",
-            "Adaptabilité et polyvalence",
-            "Gestion du stress et prise d’initiative",
+            "Project planning and management",
+            "International relations and cross-team collaboration",
+            "Analytical thinking and problem-solving",
+            "Adaptability and versatility",
+            "Stress management and initiative-taking",
           ],
         },
       },
