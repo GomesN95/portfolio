@@ -8,6 +8,14 @@ export function getExperiences(locale: Locale): IExperience[] {
   if (locale === "fr") {
     return [
       {
+        companyName: "Karre",
+        role: "Consultant Full Stack",
+        description:
+          "J'ai rejoint Karre en tant que consultant full-stack et intégré une grande banque dès ma première mission. Cette expérience me permet de renforcer mes compétences techniques dans un environnement exigeant, stimulant et riche en nouveaux défis.",
+        skills: ["JavaScript/TypeScript", "React", "Node.js", "Architecture logicielle", "Conseil", "Environnement bancaire"],
+        dates: ["2025", null],
+      },
+      {
         companyName: "YSO Corp",
         role: "Développeur Full Stack / Chef de projet",
         description:
@@ -45,6 +53,14 @@ export function getExperiences(locale: Locale): IExperience[] {
   if (locale === "pt") {
     return [
       {
+        companyName: "Karre",
+        role: "Consultor Full Stack",
+        description:
+          "Entrei na Karre como consultor full-stack e fui alocado em um grande banco já na primeira missão. Essa experiência reforça minhas competências técnicas em um ambiente exigente, estimulante e repleto de novos desafios.",
+        skills: ["JavaScript/TypeScript", "React", "Node.js", "Arquitetura de software", "Consultoria", "Ambiente bancário"],
+        dates: ["2025", null],
+      },
+      {
         companyName: "YSO Corp",
         role: "Desenvolvedor Full Stack / Gerente de Projetos",
         description:
@@ -80,6 +96,14 @@ export function getExperiences(locale: Locale): IExperience[] {
   }
 
   return [
+    {
+      companyName: "Karre",
+      role: "Full Stack Consultant",
+      description:
+        "I joined Karre as a full-stack consultant and was staffed at a major bank from my first assignment. This role helps me strengthen my technical skills while growing in a demanding, stimulating environment full of new challenges.",
+      skills: ["JavaScript/TypeScript", "React", "Node.js", "Software architecture", "Consulting", "Banking environment"],
+      dates: ["2025", null],
+    },
     {
       companyName: "YSO Corp",
       role: "Full Stack Developer / Project Manager",
