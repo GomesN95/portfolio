@@ -23,6 +23,7 @@ export function Header(props: { locale: Locale }) {
     { href: `/${props.locale}/education`, label: dictionary.nav.education },
     { href: `/${props.locale}/experiences`, label: dictionary.nav.experiences },
     { href: `/${props.locale}/projects`, label: dictionary.nav.projects },
+    { href: `/${props.locale}/skills`, label: dictionary.nav.skills },
     { href: `/${props.locale}/contact`, label: dictionary.nav.contact },
   ];
 

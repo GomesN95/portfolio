@@ -7,6 +7,7 @@ const dictionaries = {
       education: "Education",
       experiences: "Experiences",
       projects: "Projects",
+      skills: "Skills",
       contact: "Contact",
       openMenu: "Open navigation menu",
       closeMenu: "Close navigation menu",
@@ -44,6 +45,44 @@ const dictionaries = {
       },
       metadataTitle: "Projects & Portfolio",
       metadataDescription: "Selection of projects delivered or led by Nicolas Gomes, with context, stack, and role.",
+    },
+    skills: {
+      kicker: "Toolkit",
+      title: "Compétences techniques & humaines",
+      intro: "Je construis des produits web/mobile de bout en bout, de l'idéation à la mise en production, avec une approche orientée qualité, vitesse d'exécution et collaboration.",
+      metadataTitle: "Skills & Tech Stack",
+      metadataDescription: "Vue d'ensemble des compétences techniques, outils, services et soft skills de Nicolas Gomes.",
+      sections: {
+        hard: {
+          title: "Hard skills",
+          items: [
+            "JavaScript / TypeScript · React.js · Angular · Vue.js",
+            "React Native + Expo · Electron",
+            "Node.js · Koa.js",
+            "C# / .NET (LINQ, ASP, WPF, Xamarin)",
+            "PostgreSQL · MySQL · SQLite · SQL Server",
+            "Prisma · Sequelize · Entity Framework",
+          ],
+        },
+        services: {
+          title: "Apps & services",
+          items: [
+            "Docker · Heroku · Lens · Postman · Kubernetes · AWS",
+            "Figma · Jira / Trello · VS Code · Terraform · DBeaver · GitKraken",
+            "Slack / Teams · Notion · Powens · HubSpot · Contentful · Playwright",
+          ],
+        },
+        soft: {
+          title: "Soft skills",
+          items: [
+            "Planification et gestion de projets",
+            "Relations et collaborations internationales",
+            "Esprit d'analyse et résolution de problèmes",
+            "Adaptabilité et polyvalence",
+            "Gestion du stress et prise d’initiative",
+          ],
+        },
+      },
     },
     contact: {
       firstName: "First Name",
@@ -88,6 +127,7 @@ const dictionaries = {
       education: "Formation",
       experiences: "Expériences",
       projects: "Projets",
+      skills: "Compétences",
       contact: "Contact",
       openMenu: "Ouvrir le menu de navigation",
       closeMenu: "Fermer le menu de navigation",
@@ -125,6 +165,44 @@ const dictionaries = {
       },
       metadataTitle: "Projets & Portfolio",
       metadataDescription: "Sélection de projets livrés ou pilotés par Nicolas Gomes, avec contexte, stack et rôle.",
+    },
+    skills: {
+      kicker: "Boîte à outils",
+      title: "Compétences techniques & humaines",
+      intro: "Je conçois et livre des produits web/mobile de bout en bout, avec un focus constant sur la qualité, la rapidité d'exécution et la collaboration.",
+      metadataTitle: "Compétences & Stack technique",
+      metadataDescription: "Vue d'ensemble des compétences techniques, outils, services et soft skills de Nicolas Gomes.",
+      sections: {
+        hard: {
+          title: "Hard skills",
+          items: [
+            "JavaScript / TypeScript · React.js · Angular · Vue.js",
+            "React Native + Expo · Electron",
+            "Node.js · Koa.js",
+            "C# / .NET (LINQ, ASP, WPF, Xamarin)",
+            "PostgreSQL · MySQL · SQLite · SQL Server",
+            "Prisma · Sequelize · Entity Framework",
+          ],
+        },
+        services: {
+          title: "Apps & services",
+          items: [
+            "Docker · Heroku · Lens · Postman · Kubernetes · AWS",
+            "Figma · Jira / Trello · VS Code · Terraform · DBeaver · GitKraken",
+            "Slack / Teams · Notion · Powens · HubSpot · Contentful · Playwright",
+          ],
+        },
+        soft: {
+          title: "Soft skills",
+          items: [
+            "Planification et gestion de projets",
+            "Relations et collaborations internationales",
+            "Esprit d'analyse et résolution de problèmes",
+            "Adaptabilité et polyvalence",
+            "Gestion du stress et prise d’initiative",
+          ],
+        },
+      },
     },
     contact: {
       firstName: "Prénom",
@@ -169,6 +247,7 @@ const dictionaries = {
       education: "Formação",
       experiences: "Experiências",
       projects: "Projetos",
+      skills: "Skills",
       contact: "Contato",
       openMenu: "Abrir menu de navegação",
       closeMenu: "Fechar menu de navegação",
@@ -206,6 +285,44 @@ const dictionaries = {
       },
       metadataTitle: "Projetos & Portfólio",
       metadataDescription: "Seleção de projetos entregues ou liderados por Nicolas Gomes, com contexto, stack e função.",
+    },
+    skills: {
+      kicker: "Toolkit",
+      title: "Competências técnicas & comportamentais",
+      intro: "Crio e entrego produtos web/mobile ponta a ponta, com foco em qualidade, velocidade de execução e colaboração entre times.",
+      metadataTitle: "Skills & Stack técnica",
+      metadataDescription: "Visão geral das competências técnicas, ferramentas, serviços e soft skills de Nicolas Gomes.",
+      sections: {
+        hard: {
+          title: "Hard skills",
+          items: [
+            "JavaScript / TypeScript · React.js · Angular · Vue.js",
+            "React Native + Expo · Electron",
+            "Node.js · Koa.js",
+            "C# / .NET (LINQ, ASP, WPF, Xamarin)",
+            "PostgreSQL · MySQL · SQLite · SQL Server",
+            "Prisma · Sequelize · Entity Framework",
+          ],
+        },
+        services: {
+          title: "Apps & services",
+          items: [
+            "Docker · Heroku · Lens · Postman · Kubernetes · AWS",
+            "Figma · Jira / Trello · VS Code · Terraform · DBeaver · GitKraken",
+            "Slack / Teams · Notion · Powens · HubSpot · Contentful · Playwright",
+          ],
+        },
+        soft: {
+          title: "Soft skills",
+          items: [
+            "Planejamento e gestão de projetos",
+            "Relações e colaborações internacionais",
+            "Análise crítica e resolução de problemas",
+            "Adaptabilidade e versatilidade",
+            "Gestão do estresse e proatividade",
+          ],
+        },
+      },
     },
     contact: {
       firstName: "Nome",
