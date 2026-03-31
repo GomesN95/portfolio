@@ -15,7 +15,7 @@ export function ExperienceCard(props: { experience: IExperience; showMoreLabel: 
       <div className={styles.title}>
         <h2 className="company">{props.experience.companyName}</h2>
         <h2 className={styles.role}>{props.experience.role}</h2>
-        <h3>
+        <h3 className={styles.date}>
           {props.experience.dates[0]} {props.experience.dates[1] ? `- ${props.experience.dates[1]}` : ""}
         </h3>
       </div>

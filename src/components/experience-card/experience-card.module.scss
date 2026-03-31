@@ -1,47 +1,72 @@
 .experienceCard {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 10px;
+  width: 100%;
   max-width: 1024px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.06));
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.26);
+  }
 
   .title {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    text-align: center;
-    margin-bottom: 12px;
-
-    .company {}
+    gap: 4px;
+    text-align: left;
+    margin-bottom: 14px;
 
     .role {
-      margin-bottom: 10px;
+      margin-bottom: 4px;
+      opacity: 0.95;
     }
 
     .date {
-
+      display: inline-flex;
+      width: fit-content;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      letter-spacing: 0.02em;
     }
   }
 
   .description {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
+    line-height: 1.65;
+    opacity: 0.95;
   }
-
-  .tags {}
   
   .showButton {
-    margin-top: 10px;
-    padding: 5px 7px;
-    background-color: transparent;
+    margin-top: 12px;
+    padding: 6px 10px;
+    background: rgba(255, 255, 255, 0.08);
     color: white;
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
     cursor: pointer;
     font-size: 12px;
-    transition: background 0.3s;
+    font-weight: 600;
+    transition: background 0.3s ease, border-color 0.3s ease;
   
     &:hover {
-      background-color: rgba(255, 255, 255, 0.3);
+      background-color: rgba(255, 255, 255, 0.18);
+      border-color: rgba(255, 255, 255, 0.4);
     }
   }
+}
 
+@media (max-width: 768px) {
+  .experienceCard {
+    padding: 16px;
+    border-radius: 14px;
+  }
 }
