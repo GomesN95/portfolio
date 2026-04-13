@@ -55,7 +55,21 @@
   .link {
     margin-top: auto;
     width: fit-content;
-    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
+    color: var(--secondary);
     font-weight: 700;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: transparent;
+      color: var(--primary);
+      box-shadow: 0 0 12px rgba(234, 96, 35, 0.35);
+    }
   }
 }
