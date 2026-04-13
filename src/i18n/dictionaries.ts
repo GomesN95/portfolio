@@ -82,6 +82,14 @@ const dictionaries = {
             "Stress management and initiative-taking",
           ],
         },
+        certifications: {
+          title: "Certifications & online courses",
+          items: [
+            "n8n Level 1 · Automation Fundamentals (completed)",
+            "n8n Level 2 · Advanced Workflow Automation (completed)",
+            "Continuous learning through specialized product and AI courses",
+          ],
+        },
       },
     },
     contact: {
@@ -202,6 +210,14 @@ const dictionaries = {
             "Gestion du stress et prise d’initiative",
           ],
         },
+        certifications: {
+          title: "Certifications & cours en ligne",
+          items: [
+            "n8n Niveau 1 · Fondamentaux de l'automatisation (terminé)",
+            "n8n Niveau 2 · Automatisation avancée des workflows (terminé)",
+            "Veille continue via des formations spécialisées produit et IA",
+          ],
+        },
       },
     },
     contact: {
@@ -320,6 +336,14 @@ const dictionaries = {
             "Análise crítica e resolução de problemas",
             "Adaptabilidade e versatilidade",
             "Gestão do estresse e proatividade",
+          ],
+        },
+        certifications: {
+          title: "Certificações & cursos online",
+          items: [
+            "n8n Nível 1 · Fundamentos de automação (concluído)",
+            "n8n Nível 2 · Automação avançada de workflows (concluído)",
+            "Aprendizado contínuo com cursos especializados em produto e IA",
           ],
         },
       },

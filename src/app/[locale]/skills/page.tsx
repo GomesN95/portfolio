@@ -62,6 +62,15 @@ export default async function SkillsPage({ params }: { params: Promise<{ locale:
             ))}
           </ul>
         </article>
+
+        <article className={`${styles.card} ${styles.certifications}`}>
+          <h2>{sections.certifications.title}</h2>
+          <ul>
+            {sections.certifications.items.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </article>
       </section>
     </div>
   );
