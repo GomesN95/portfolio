@@ -43,6 +43,7 @@ export const PROJECTS: IProject[] = [
     client: 'YSO Corp',
     summary: 'Developer tooling and utilities designed to speed up production workflows and repeated delivery tasks.',
     stack: ['Node.js', 'TypeScript', 'Shell'],
+    href: 'https://gameutils.ysocorp.com',
     status: 'private',
   },
   {
