@@ -82,13 +82,28 @@
   }
 }
 
+.certificationLink {
+  color: #f5f5f5;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+
+  &:hover {
+    color: var(--primary);
+  }
+}
+
 .soft {
-  grid-column: span 12;
+  grid-column: span 6;
+}
+
+.certifications {
+  grid-column: span 6;
 }
 
 @media (max-width: 900px) {
   .card,
-  .soft {
+  .soft,
+  .certifications {
     grid-column: span 12;
   }
 }

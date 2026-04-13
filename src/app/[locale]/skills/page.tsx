@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
@@ -59,6 +60,25 @@ export default async function SkillsPage({ params }: { params: Promise<{ locale:
           <ul>
             {sections.soft.items.map((item) => (
               <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </article>
+
+        <article className={`${styles.card} ${styles.certifications}`}>
+          <h2>{sections.certifications.title}</h2>
+          <ul>
+            {sections.certifications.items.map((item) => (
+              <li key={item.text}>
+                <span>{item.text}</span>
+                {item.href && item.linkLabel ? (
+                  <>
+                    {" "}
+                    <Link href={item.href} target="_blank" rel="noreferrer" className={styles.certificationLink}>
+                      {item.linkLabel}
+                    </Link>
+                  </>
+                ) : null}
+              </li>
             ))}
           </ul>
         </article>

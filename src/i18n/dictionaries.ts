@@ -82,6 +82,19 @@ const dictionaries = {
             "Stress management and initiative-taking",
           ],
         },
+        certifications: {
+          title: "Certifications & online courses",
+          items: [
+            {
+              text: "n8n Level 1 & 2 · Workflow automation certification path (completed)",
+              linkLabel: "View my n8n badges",
+              href: "https://community.n8n.io/u/nicolas_gomes/badges",
+            },
+            {
+              text: "Continuous learning through specialized product and AI courses",
+            },
+          ],
+        },
       },
     },
     contact: {
@@ -202,6 +215,19 @@ const dictionaries = {
             "Gestion du stress et prise d’initiative",
           ],
         },
+        certifications: {
+          title: "Certifications & cours en ligne",
+          items: [
+            {
+              text: "n8n Niveaux 1 & 2 · Parcours de certification en automatisation de workflows (terminé)",
+              linkLabel: "Voir mes badges n8n",
+              href: "https://community.n8n.io/u/nicolas_gomes/badges",
+            },
+            {
+              text: "Veille continue via des formations spécialisées produit et IA",
+            },
+          ],
+        },
       },
     },
     contact: {
@@ -320,6 +346,19 @@ const dictionaries = {
             "Análise crítica e resolução de problemas",
             "Adaptabilidade e versatilidade",
             "Gestão do estresse e proatividade",
+          ],
+        },
+        certifications: {
+          title: "Certificações & cursos online",
+          items: [
+            {
+              text: "n8n Níveis 1 & 2 · Trilha de certificação em automação de workflows (concluída)",
+              linkLabel: "Ver meus badges n8n",
+              href: "https://community.n8n.io/u/nicolas_gomes/badges",
+            },
+            {
+              text: "Aprendizado contínuo com cursos especializados em produto e IA",
+            },
           ],
         },
       },
