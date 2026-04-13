@@ -82,6 +82,16 @@
   }
 }
 
+.certificationLink {
+  color: #f5f5f5;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+
+  &:hover {
+    color: var(--primary);
+  }
+}
+
 .soft {
   grid-column: span 6;
 }

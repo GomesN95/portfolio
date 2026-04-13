@@ -85,9 +85,14 @@ const dictionaries = {
         certifications: {
           title: "Certifications & online courses",
           items: [
-            "n8n Level 1 · Automation Fundamentals (completed)",
-            "n8n Level 2 · Advanced Workflow Automation (completed)",
-            "Continuous learning through specialized product and AI courses",
+            {
+              text: "n8n Level 1 & 2 · Workflow automation certification path (completed)",
+              linkLabel: "View my n8n badges",
+              href: "https://community.n8n.io/u/nicolas_gomes/badges",
+            },
+            {
+              text: "Continuous learning through specialized product and AI courses",
+            },
           ],
         },
       },
@@ -213,9 +218,14 @@ const dictionaries = {
         certifications: {
           title: "Certifications & cours en ligne",
           items: [
-            "n8n Niveau 1 · Fondamentaux de l'automatisation (terminé)",
-            "n8n Niveau 2 · Automatisation avancée des workflows (terminé)",
-            "Veille continue via des formations spécialisées produit et IA",
+            {
+              text: "n8n Niveaux 1 & 2 · Parcours de certification en automatisation de workflows (terminé)",
+              linkLabel: "Voir mes badges n8n",
+              href: "https://community.n8n.io/u/nicolas_gomes/badges",
+            },
+            {
+              text: "Veille continue via des formations spécialisées produit et IA",
+            },
           ],
         },
       },
@@ -341,9 +351,14 @@ const dictionaries = {
         certifications: {
           title: "Certificações & cursos online",
           items: [
-            "n8n Nível 1 · Fundamentos de automação (concluído)",
-            "n8n Nível 2 · Automação avançada de workflows (concluído)",
-            "Aprendizado contínuo com cursos especializados em produto e IA",
+            {
+              text: "n8n Níveis 1 & 2 · Trilha de certificação em automação de workflows (concluída)",
+              linkLabel: "Ver meus badges n8n",
+              href: "https://community.n8n.io/u/nicolas_gomes/badges",
+            },
+            {
+              text: "Aprendizado contínuo com cursos especializados em produto e IA",
+            },
           ],
         },
       },
