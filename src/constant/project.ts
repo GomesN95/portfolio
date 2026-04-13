@@ -14,6 +14,7 @@ export const PROJECTS: IProject[] = [
     client: 'BIC',
     summary: 'Customization experience for BIC products, combining front-end polish and client-facing delivery constraints.',
     stack: ['Vue.js', 'TypeScript', 'Node.js'],
+    href: 'https://us.bic.com/en_us/design-my-bic-lighters-set-of-6-personalized-lighters.html',
     status: 'case-study',
   },
   {
