@@ -29,6 +29,7 @@ export const PROJECTS: IProject[] = [
     client: 'YSO Corp',
     summary: 'Interactive playable ad workflow involving rapid iteration, performance constraints and cross-team delivery.',
     stack: ['JavaScript', 'Canvas', 'Webpack'],
+    href: 'https://www.monsterplayable.com',
     status: 'private',
   },
   {
